@@ -9,6 +9,22 @@ html
         link(rel="stylesheet" href="/assets/css/main.css")
 
     body.page
+        header.theme-dark
+            .container
+                .top-header
+                    .top-header__promo-wrapper
+                        .top-header__promo
+                            | Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+                            a(href="#").top-header__link.text-selected-6 ShopNow
+
+                    a(href='#').lang-switcher
+                        | English
+                        .lang-switcher__inner
+                            .lang-switcher__item.active English
+                            .lang-switcher__item Russian
+                            .lang-switcher__item Español
+
+
         block content
 
         script(type="module", src="/assets/scripts/script.js")

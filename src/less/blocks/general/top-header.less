@@ -1,0 +1,29 @@
+.top-header
+{
+    font-size: 14px;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    display: grid;
+    grid-template-columns: 1fr auto minmax(0, 1fr);
+    align-items: center;
+
+    &__promo-wrapper
+    {
+        width : 100%;
+        grid-column: 2;
+    }
+
+    &__link
+    {
+        text-decoration: underline;
+        margin-left: 8px;
+    }
+
+    & > .lang-switcher
+    {
+        grid-column: 3;
+        justify-self: end;
+    }
+}

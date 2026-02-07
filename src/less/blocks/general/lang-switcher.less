@@ -1,0 +1,59 @@
+.lang-switcher
+{
+    color        : #FAFAFA;
+    position     : relative;
+
+    display      : inline-grid;
+    display      : -ms-inline-grid;
+    display      : -moz-inline-grid;
+
+    padding-left : 25px;
+    padding-right: 25px;
+    cursor       : pointer;
+    
+    &__inner
+    {
+        position   : absolute;
+        top        : calc(100% + 15px);
+        overflow-y : hidden;
+        height     : 0;
+    }
+
+    &:focus &__inner
+    {
+        height : auto;
+    }
+
+    &::after
+    {
+        content: '';
+
+        position: absolute;
+        right: 0;
+
+        width: 13px;
+        height: 8px;
+        top: calc(50% - 4px);
+        background-image: url('/assets/images/icons/arrow-down.svg');
+
+        transition: .5s;
+    }
+
+    &:focus::after
+    {
+        transform: rotateZ(180deg);
+    }
+}
+
+.lang-switcher__item
+{
+    background-color : #000000EE;
+    padding          : 15px 25px;
+    transition       : .2s;
+
+    &:hover
+    {
+        padding-left  : 30px;
+        padding-right : 20px;
+    }
+}
