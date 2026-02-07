@@ -1,0 +1,40 @@
+.search-form
+{
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+
+    input, button
+    {
+        background : none;
+        border     : none;
+        padding    : 0;
+        margin     : 0;
+    }
+
+    input
+    {
+        width : calc(100% - 36px);
+    }
+
+    button
+    {
+        cursor: pointer;
+        transition: .1s;
+
+        &:hover { transform: scale(.85); }
+        &:active { transform: translateY(2.5px) scale(.85); }
+    }
+
+    &__wrapper
+    {
+        width            : 243px;
+        height           : 48px;
+
+        padding          : 10px 12px 10px 20px;
+
+        background-color : #F5F5F5;
+        border-radius    : 4px;
+        box-sizing       : border-box;
+    }
+}

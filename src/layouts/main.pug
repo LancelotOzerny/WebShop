@@ -35,15 +35,21 @@ html
                         a(href='#').navbar__item About
                         a(href='#').navbar__item Sign Up
 
-                    .top-navigation__control
-                        .input(type='search')
+                    .top-navigation__user-actions
+                        form.search-form__wrapper
+                            .search-form
+                                 input(placeholder='What are you looking for?')
+                                 button(type='submit')
+                                    img(src="/assets/images/icons/search.svg")
 
-                        .top-navigation__favourites
-                            img(src='/assets/images/icons/favorites.svg')
-                        .top-navigation__bucket
-                            img(src='/assets/images/icons/bucket.svg')
-                        .top-navigation__profile
-                            img(src='/assets/images/icons/profile.svg')
+
+                        .top-navigation__control
+                            a(href='#').top-navigation__control-item
+                                img(src='/assets/images/icons/favorites.svg')
+                            a(href='#').top-navigation__control-item
+                                img(src='/assets/images/icons/bucket.svg')
+                            a(href='#').top-navigation__control-item
+                                img(src='/assets/images/icons/profile.svg')
 
         block content
 

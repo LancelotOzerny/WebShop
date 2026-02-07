@@ -1,19 +1,48 @@
 .top-navigation
 {
-    padding-top: 40px;
-    padding-bottom: 16px;
+    padding-top     : 40px;
+    padding-bottom  : 16px;
 
     &__wrapper
     {
-        border-bottom: 0.5px solid #b3b3b3;
+        border-bottom : 0.5px solid #B3B3B3;
     }
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
 
     &__logo
     {
-        font-size: 24px;
+        font-size : 24px;
+    }
+
+    &__user-actions
+    {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__control
+    {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__control-item
+    {
+        cursor: pointer;
+        transition: .1s;
+
+        &:hover
+        {
+            transform: scale(.85);
+        }
+
+        &:active
+        {
+            transform: translateY(2.5px) scale(.85);
+        }
     }
 }
