@@ -4,6 +4,7 @@ node_modules/
 
 dist/
 public_html/
+!public_html/assets/fonts/
 
 test/
 
