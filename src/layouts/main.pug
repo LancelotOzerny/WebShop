@@ -24,6 +24,26 @@ html
                             .lang-switcher__item Russian
                             .lang-switcher__item Español
 
+        div.top-navigation__wrapper
+            .container
+                .top-navigation
+                    a.top-navigation__logo.text-selected-7 Exclusive
+
+                    nav.navbar.navbar-horizontal
+                        a(href='#').navbar__item.active Home
+                        a(href='#').navbar__item Contact
+                        a(href='#').navbar__item About
+                        a(href='#').navbar__item Sign Up
+
+                    .top-navigation__control
+                        .input(type='search')
+
+                        .top-navigation__favourites
+                            img(src='/assets/images/icons/favorites.svg')
+                        .top-navigation__bucket
+                            img(src='/assets/images/icons/bucket.svg')
+                        .top-navigation__profile
+                            img(src='/assets/images/icons/profile.svg')
 
         block content
 
