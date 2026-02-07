@@ -1,0 +1,12 @@
+node_modules/
+.idea/
+.git/
+
+dist/
+public_html/
+
+test/
+
+*.html
+*.css
+*.js
