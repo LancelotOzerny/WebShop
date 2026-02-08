@@ -1,0 +1,39 @@
+extends ./../../layouts/main
+
+block content
+    .page-block
+        .container.contacts
+            .contacts-list
+                .contacts-list__item
+                    header
+                        img(src='/assets/images/icons/contacts/icons-phone.png')
+                        p call to us
+
+                    .navbar.navbar-vertical
+                        p.navbar__item We are available 24/7, 7 days a week.
+                        p.navbar__item Phone: +8801611112222
+
+                .contacts-list__separator
+
+                .contacts-list__item
+                    header
+                        img(src='/assets/images/icons/contacts/icons-mail.png')
+                        p write to ass
+
+                    .navbar.navbar-vertical
+                        p.navbar__item Fill out our form and we will contact you within 24 hours.
+                        p.navbar__item Emails: customer@exclusive.com
+                        p.navbar__item Emails: support@exclusive.com
+
+
+            form.form.form--light.feedback-form
+                .form__h-group
+                    input(placeholder='Your name')
+                    input(placeholder='Your Email')
+                    input(placeholder='Your Phone')
+
+                .form__h-group
+                    textarea(placeholder='Your message')
+
+                .form__group
+                    input(type='submit').btn.btn--danger
