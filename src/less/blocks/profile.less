@@ -1,0 +1,46 @@
+.profile
+{
+    display: grid;
+    grid-template-columns: 270px 870px;
+    grid-column-gap: 30px;
+    padding-bottom: 140px;
+
+    .form
+    {
+        padding: 40px 80px;
+        box-shadow: @box-shadow--light;
+
+        label
+        {
+            text-transform: capitalize;
+        }
+
+        &__inner
+        {
+            display: grid;
+            grid-row-gap: 24px;
+        }
+
+        &__title
+        {
+            color: @color-red-selected;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        &__v-group
+        {
+            gap: 8px;
+        }
+        &__h-group
+        {
+            gap: 50px;
+        }
+        input[type='reset']
+        {
+            margin-right: 32px;
+            cursor: pointer;
+        }
+    }
+}

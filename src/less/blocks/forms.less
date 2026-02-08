@@ -20,6 +20,12 @@
         height: 200px;
     }
 
+    &__v-group
+    {
+        width : 100%;
+        display: grid;
+    }
+
     &__h-group
     {
         width : 100%;
@@ -37,5 +43,15 @@
     input:not([type='submit']), textarea
     {
         background-color : @base-light-color;
+    }
+}
+
+.form
+{
+    input.clear
+    {
+        display: inline;
+        width: auto;
+        background : none;
     }
 }
