@@ -76,31 +76,54 @@ html
 
                         nav.main-footer__list.navbar.navbar-vertical
                             a.navbar__item 111 Bijoy sarani, Dhaka,<br/> DH 1515, Bangladesh.
-                            a.navbar__item exclusive@gmail.com
-                            a.navbar__item +88015-88888-9999
+                            a(href='mailto:exclusive@gmail.com').navbar__item exclusive@gmail.com
+                            a(href='tel:88015888889999').navbar__item +88015-88888-9999
 
                     .main-footer__block
                         .main-footer__title Account
 
                         nav.main-footer__list.navbar.navbar-vertical.capitalize
-                            a.navbar__item My account
-                            a.navbar__item Login / Register
-                            a.navbar__item Cart
-                            a.navbar__item Wishlist
-                            a.navbar__item Shop
+                            a(href='#').navbar__item My account
+                            a(href='#').navbar__item Login / Register
+                            a(href='#').navbar__item Cart
+                            a(href='#').navbar__item Wishlist
+                            a(href='#').navbar__item Shop
 
 
                     .main-footer__block
                         .main-footer__title Quick Link
 
                         nav.main-footer__list.navbar.navbar-vertical.capitalize
-                            a.navbar__item privacy policy
-                            a.navbar__item Terms Of use
-                            a.navbar__item FAQ
-                            a.navbar__item Contact
+                            a(href='#').navbar__item privacy policy
+                            a(href='#').navbar__item Terms Of use
+                            a(href='#').navbar__item FAQ
+                            a(href='#').navbar__item Contact
 
                     .main-footer__block
                         .main-footer__title Download App
+
+                        .app-download
+                            p.app-download__title Save $3 with App New User Only
+                            .app-download__inner
+                                img(src='/assets/images/footer/QrCode.png').app-download__code
+                                a(href='#')
+                                    img(src='/assets/images/footer/GooglePlay.png').app-download__playMarket
+
+                                a(href='#')
+                                    img(src='/assets/images/footer/AppStore.png').app-download__appStore
+
+                        .main-footer__networks
+                            a(href='#')
+                                img(src='/assets/images/icons/networks/Icon-Facebook.png')
+
+                            a(href='#')
+                                img(src='/assets/images/icons/networks/Icon-Twitter.png')
+
+                            a(href='#')
+                                img(src='/assets/images/icons/networks/Icon-instagram.png')
+
+                            a(href='#')
+                                img(src='/assets/images/icons/networks/Icon-Linkedin.png')
 
         .copyright.theme-dark
             .container

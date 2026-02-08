@@ -32,5 +32,16 @@
 
 .navbar-vertical
 {
-    flex-direction: column;
+    flex-direction : column;
+
+    .navbar__item
+    {
+        transition: .1s;
+    }
+
+    .navbar__item:hover
+    {
+        cursor    : pointer;
+        transform : translateX(2.5px);
+    }
 }

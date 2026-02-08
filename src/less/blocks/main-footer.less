@@ -1,39 +1,90 @@
 .main-footer
 {
-    padding-top: 80px;
-    padding-bottom: 60px;
+    padding-top    : 80px;
+    padding-bottom : 60px;
 
     &__inner
     {
-        display: flex;
-        gap: 87px;
+        display : flex;
+        gap     : 87px;
     }
 
     &__title
     {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 24px;
+        font-size     : 20px;
+        font-weight   : 500;
+        margin-bottom : 24px;
 
         &.selected
         {
-            font-size: 24px;
-            font-weight: 600;
+            font-size   : 24px;
+            font-weight : 600;
         }
     }
 
     &__send-form
     {
-        width: 217px;
+        width : 217px;
     }
 
     &__list
     {
-        gap: 16px;
+        gap : 16px;
     }
 
     &__list.capitalize
     {
-        text-transform: capitalize;
+        text-transform : capitalize;
+    }
+}
+
+@hover-border-size: 2px;
+@hover-padding-icon: 15px;
+.main-footer__networks
+{
+    margin-top : 24px;
+    display    : flex;
+    gap        : 24px;
+
+    a
+    {
+        display  : block;
+        position : relative;
+
+        img
+        {
+            display : block;
+        }
+
+        &::before
+        {
+            content       : '';
+
+            position      : absolute;
+            top           : calc(50% - @hover-padding-icon / 2 - @hover-border-size / 2);
+            left          : calc(50% - @hover-padding-icon / 2 - @hover-border-size / 2);
+            border-radius : 50px;
+
+            background    : none;
+
+            width         : 0;
+            height        : 0;
+
+            border        : @hover-border-size solid rgba(147, 147, 147, 0.49);
+            opacity       : 0;
+
+            transition    : .2s;
+        }
+
+        &:hover::before
+        {
+            top           : calc(-@hover-padding-icon / 2 - @hover-border-size / 2);
+            left          : calc(-@hover-padding-icon / 2 - @hover-border-size / 2);
+
+            width  : calc(100% + @hover-padding-icon);
+            height : calc(100% + @hover-padding-icon);
+
+            opacity: 1;
+        }
     }
 }
