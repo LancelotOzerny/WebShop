@@ -1,8 +1,18 @@
 extends ./../layouts/main
 
 block content
-    .page-block.page-404
-        .container
-            .page-404__title 404 Not Found
-            .page-404__subtitle Your visited page not found. You may go home page
-            a(href='#').btn.btn--danger Back to home page
+    .page-block
+        .container.contacts
+            .left-side
+
+            form.form.form--light.feedback-form
+                .form__h-group
+                    input(placeholder='Your name')
+                    input(placeholder='Your Email')
+                    input(placeholder='Your Phone')
+
+                .form__h-group
+                    textarea(placeholder='Your message')
+
+                .form__group
+                    input(type='submit').btn.btn--danger

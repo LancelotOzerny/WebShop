@@ -1,0 +1,24 @@
+.contacts
+{
+    display: grid;
+    grid-template-columns: 340px 800px;
+    grid-column-gap: 30px;
+    padding-bottom: 140px;
+
+    .form
+    {
+        grid-row-gap: 32px;
+        padding: 40px 31px;
+        box-shadow: 0 1px 13px rgba(0, 0, 0, 0.1);
+
+        &__h-group
+        {
+            gap: 16px;
+        }
+    }
+
+    .form__group:has(input[type='submit'])
+    {
+        text-align: right;
+    }
+}

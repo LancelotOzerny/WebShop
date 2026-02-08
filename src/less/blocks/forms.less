@@ -1,0 +1,42 @@
+@color-light : #F5F5F5;
+@color-dark  : #222222;
+
+
+.form
+{
+    display: grid;
+    border-radius: 4px;
+
+    input:not([type='submit']), textarea
+    {
+        width: 100%;
+        border-radius: 4px;
+        padding: 13px 16px;
+        box-sizing: border-box;
+    }
+
+    textarea
+    {
+        resize: none;
+        height: 200px;
+    }
+
+    &__h-group
+    {
+        width : 100%;
+        display: flex;
+
+        * > *
+        {
+            width : 100%;
+        }
+    }
+}
+
+.form--light
+{
+    input:not([type='submit']), textarea
+    {
+        background-color : @color-light;
+    }
+}
