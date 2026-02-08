@@ -36,12 +36,10 @@ html
                         a(href='#').navbar__item Sign Up
 
                     .top-navigation__user-actions
-                        form.search-form__wrapper
-                            .search-form
-                                 input(placeholder='What are you looking for?')
-                                 button(type='submit')
-                                    img(src="/assets/images/icons/search.svg")
-
+                        form.top-navigation__search-form.form-block.form--light
+                            input.form-block__input(placeholder="What are you looking for?")
+                            button.form-block__button(type='submit')
+                                img.form-block__icon(src="/assets/images/icons/search.svg")
 
                         .top-navigation__control
                             a(href='#').top-navigation__control-item
@@ -56,7 +54,56 @@ html
                 span.breadcrumbs__separator /
                 span.active 404 Error
 
-
         block content
+
+        footer.main-footer.theme-dark
+            .container
+                .main-footer__inner
+                    .main-footer__block
+                        .main-footer__title.selected Exclusive
+                        .main-footer__title Subscribe
+
+                        nav.main-footer__list.navbar.navbar-vertical
+                            a(href="#").navbar__item Get 10% off your first order
+
+                            form.form.form-block.form--outline.form--dark.main-footer__send-form
+                                input.form-block__input(type='email', placeholder="Enter your email")
+                                button.form-block__button(type="submit")
+                                    img.form-block__icon(src='/assets/images/icons/icon-send.svg')
+
+                    .main-footer__block
+                        .main-footer__title Support
+
+                        nav.main-footer__list.navbar.navbar-vertical
+                            a.navbar__item 111 Bijoy sarani, Dhaka,<br/> DH 1515, Bangladesh.
+                            a.navbar__item exclusive@gmail.com
+                            a.navbar__item +88015-88888-9999
+
+                    .main-footer__block
+                        .main-footer__title Account
+
+                        nav.main-footer__list.navbar.navbar-vertical.capitalize
+                            a.navbar__item My account
+                            a.navbar__item Login / Register
+                            a.navbar__item Cart
+                            a.navbar__item Wishlist
+                            a.navbar__item Shop
+
+
+                    .main-footer__block
+                        .main-footer__title Quick Link
+
+                        nav.main-footer__list.navbar.navbar-vertical.capitalize
+                            a.navbar__item privacy policy
+                            a.navbar__item Terms Of use
+                            a.navbar__item FAQ
+                            a.navbar__item Contact
+
+                    .main-footer__block
+                        .main-footer__title Download App
+
+        .copyright.theme-dark
+            .container
+                | Copyright Rimel 2022. All right reserved
 
         script(type="module", src="/assets/scripts/script.js")

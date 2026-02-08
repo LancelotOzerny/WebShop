@@ -1,0 +1,61 @@
+@color-light : #F5F5F5;
+@color-dark  : #222222;
+
+
+.form-block
+{
+    border-radius   : 4px;
+    display         : inline-flex;
+    justify-content : space-between;
+
+    &__button
+    {
+        display      : inline-block;
+        background   : none;
+        width        : 24px;
+        margin-right : 12px;
+        cursor       : pointer;
+    }
+
+    &__input
+    {
+        border-radius : 4px;
+        width         : calc(100% - 24px);
+        padding       : 13px 12px 13px 20px;
+        display       : inline-block;
+    }
+}
+
+.form-block.form--outline
+{
+    background : none;
+    border: 1.5px solid @color-light;
+
+    input, input:focus
+    {
+        background : none;
+        outline: none;
+        border: none;
+    }
+}
+
+.form-block.form--dark
+{
+    color : @color-light;
+
+    input
+    {
+        color : @color-light;
+    }
+}
+
+.form-block.form--light
+{
+    background-color: @color-light;
+
+    input
+    {
+        background : none;
+        color : @color-dark;
+    }
+}
