@@ -3,8 +3,23 @@ extends ./../layouts/main
 block content
     .page-block
         .container.profile
-            .profile-navigation
+            .profile-nav
+                .profile-nav__section
+                    p.profile-nav__title Manage My Account
 
+                    nav.navbar.navbar-vertical.capitalize
+                        a(href='#').profile-nav__item My Profile
+                        a(href='#').profile-nav__item Address Book
+                        a(href='#').profile-nav__item My Payment Options
+
+                .profile-nav__section
+                    p.profile-nav__title My Orders
+
+                    nav.navbar.navbar-vertical
+                        a(href='#').profile-nav__item My Returns
+                        a(href='#').profile-nav__item My Cancellations
+
+                .profile-nav__section My WishList
 
 
             form.form.form--light.feedback-form
