@@ -3,4 +3,31 @@ extends ./../layouts/main
 block content
     .page-block
         .container.py-5
-            h1 Main Page
+            div.main-title
+                .main-title__small Categories
+                .main-title__large Browse By Category
+
+            .categories-list
+                a(href='#').category
+                    img(src='/assets/images/icons/categories/Category-CellPhone.svg').category__icon
+                    p.category__title Phones
+
+                a(href='#').category
+                    img(src='/assets/images/icons/categories/Category-Computer.svg').category__icon
+                    p.category__title Computers
+
+                a(href='#').category
+                    img(src='/assets/images/icons/categories/Category-SmartWatch.svg').category__icon
+                    p.category__title SmartWatch
+
+                a(href='#').category
+                    img(src='/assets/images/icons/categories/Category-Camera.svg').category__icon
+                    p.category__title Camera
+
+                a(href='#').category
+                    img(src='/assets/images/icons/categories/Category-Headphone.svg').category__icon
+                    p.category__title HeadPhones
+
+                a(href='#').category
+                    img(src='/assets/images/icons/categories/Category-Gamepad.svg').category__icon
+                    p.category__title Gaming
