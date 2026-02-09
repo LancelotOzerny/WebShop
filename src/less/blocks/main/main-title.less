@@ -1,34 +1,39 @@
 .main-title
 {
-    font-weight: 700;
-    margin-bottom: 60px;
+    font-weight   : 700;
+    margin-bottom : 60px;
 
     &__small
     {
-        display: inline-block;
-        color: @color-red-selected;
-        padding-left: 36px;
-        position: relative;
-        line-height: 40px;
+        display      : inline-block;
+        color        : @color-red-selected;
+        padding-left : 36px;
+        position     : relative;
+        line-height  : 40px;
 
         &::before
         {
-            content: '';
+            content          : '';
 
             background-color : @color-red-selected;
-            width: 20px;
-            height : 100%;
+            width            : 20px;
+            height           : 100%;
 
-            border-radius: 4px;
+            border-radius    : 4px;
 
-            position: absolute;
-            left: 0;
+            position         : absolute;
+            left             : 0;
         }
     }
 
     &__large
     {
-        margin-top: 20px;
-        font-size: 36px;
+        margin-top : 20px;
+        font-size  : 36px;
+    }
+
+    .timer
+    {
+        margin-left: 87px;
     }
 }

@@ -2,7 +2,7 @@ extends ./../layouts/main
 
 block content
     section
-        .container.py-5
+        .container
             header
                 div.main-title
                     .main-title__small Today’s
@@ -10,25 +10,11 @@ block content
                     div.flex
                         .main-title__large Flash Sales
 
-                        div.timer
-                            .timer__item
-                                p.timer__item-title Days
-                                p.timer__item-time 03
+                        +timer()
 
-                            .timer__item
-                                p.timer__item-title Hours
-                                p.timer__item-time 23
-
-                            .timer__item
-                                p.timer__item-title Minutes
-                                p.timer__item-time 19
-
-                            .timer__item
-                                p.timer__item-title Seconds
-                                p.timer__item-time 56
 
     section
-        .container.py-5
+        .container
             header
                 div.main-title
                     .main-title__small Categories
@@ -61,25 +47,35 @@ block content
 
 
     section
-        .container.py-5
+        .container
             header
                 div.main-title
                     .main-title__small This Month
                     .main-title__large Best Selling Products
 
-    .slider
+
+    .discount-block
+        .container.discount.theme-dark
+            .discount__info
+                .discount__title-small Categories
+                .discount__title-large Enhance Your <br/> Music Experience
+                +timer('white-shapes')
+                .discount-control
+                    a(href='#').btn.btn--success Buy Now!
+
+            .discount__light
+            img(src='/assets/images/home/discount-image.png').discount__image
 
 
     section
-        .container.py-5
+        .container
             header
                 div.main-title
                     .main-title__small Our Products
                     .main-title__large Explore Our Products
 
-
     section
-        .container.py-5
+        .container
             header
                 div.main-title
                     .main-title__small Featured
