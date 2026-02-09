@@ -1,0 +1,55 @@
+extends ./../../layouts/main
+
+block content
+    .page-block
+        .container.profile
+            .profile-nav
+                .profile-nav__section
+                    p.profile-nav__title Manage My Account
+
+                    nav.navbar.navbar-vertical.capitalize
+                        a(href='#').profile-nav__item My Profile
+                        a(href='#').profile-nav__item Address Book
+                        a(href='#').profile-nav__item My Payment Options
+
+                .profile-nav__section
+                    p.profile-nav__title My Orders
+
+                    nav.navbar.navbar-vertical
+                        a(href='#').profile-nav__item My Returns
+                        a(href='#').profile-nav__item My Cancellations
+
+                .profile-nav__section My WishList
+
+
+            form.form.form--light.feedback-form
+                p.form__title Edit Your Profile
+                .form__inner
+                    .form__h-group
+                        .form__v-group
+                            label(for='profile-first-name') First name
+                            input(placeholder='MD', name='profile-first-name' id='profile-first-name')
+
+                        .form__v-group
+                            label(for='profile-last-name') Last name
+                            input(placeholder='Ramel', name='profile-last-name' id='profile-last-name')
+
+                    .form__h-group
+                        .form__v-group
+                            label(for='profile-email') First name
+                            input(type='email', placeholder='rimel1111@gmail.com', name='profile-email' id='profile-email')
+
+                        .form__v-group
+                            label(for='profile-last-address') Last name
+                            input(type='address', placeholder='Kingston, 5236, United State', name='profile-last-address' id='profile-last-address')
+
+                    .form__h-group
+                        .form__v-group
+                            label(for='profile-email') Password changes
+                            input(type='password', placeholder='Current Password', name='profile-current-password' id='profile-email')
+                            input(type='password', placeholder='New Password', name='profile-new-password' id='profile-email')
+                            input(type='password', placeholder='Confirm New Password', name='profile-confirm-password' id='profile-email')
+
+                    .flex.justify-content--end
+                        input(type='reset', value='clear').clear
+                        input(type='submit' value='Save Changes').btn.btn--danger
