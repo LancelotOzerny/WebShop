@@ -1,11 +1,38 @@
 extends ./../layouts/main
 
 block content
-    .page-block
+    section
         .container.py-5
-            div.main-title
-                .main-title__small Categories
-                .main-title__large Browse By Category
+            header
+                div.main-title
+                    .main-title__small Today’s
+
+                    div.flex
+                        .main-title__large Flash Sales
+
+                        div.timer
+                            .timer__item
+                                p.timer__item-title Days
+                                p.timer__item-time 03
+
+                            .timer__item
+                                p.timer__item-title Hours
+                                p.timer__item-time 23
+
+                            .timer__item
+                                p.timer__item-title Minutes
+                                p.timer__item-time 19
+
+                            .timer__item
+                                p.timer__item-title Seconds
+                                p.timer__item-time 56
+
+    section
+        .container.py-5
+            header
+                div.main-title
+                    .main-title__small Categories
+                    .main-title__large Browse By Category
 
             .categories-list
                 a(href='#').category
@@ -31,3 +58,29 @@ block content
                 a(href='#').category
                     img(src='/assets/images/icons/categories/Category-Gamepad.svg').category__icon
                     p.category__title Gaming
+
+
+    section
+        .container.py-5
+            header
+                div.main-title
+                    .main-title__small This Month
+                    .main-title__large Best Selling Products
+
+    .slider
+
+
+    section
+        .container.py-5
+            header
+                div.main-title
+                    .main-title__small Our Products
+                    .main-title__large Explore Our Products
+
+
+    section
+        .container.py-5
+            header
+                div.main-title
+                    .main-title__small Featured
+                    .main-title__large New Arrival
