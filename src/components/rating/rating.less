@@ -1,0 +1,50 @@
+.rating
+{
+    display     : inline-flex;
+    align-items : center;
+    gap         : 8px;
+
+    &__inner
+    {
+        display     : inline-flex;
+        align-items : center;
+    }
+
+    &__star
+    {
+        width      : 20px;
+        height     : 20px;
+
+        background : url('/assets/images/icons/gray-star.png') no-repeat center center;
+        position   : relative;
+    }
+
+    &__star::before
+    {
+        content    : '';
+
+        position   : absolute;
+
+        width      : var(--width);
+        height     : 100%;
+
+        background : url('/assets/images/icons/yellow-star.png') no-repeat;
+    }
+
+    &__count
+    {
+        font-size   : 14px;
+        font-weight : 600;
+        color       : #8D8D8D;
+
+        &::before
+        {
+            content : '('
+        }
+
+        &::after
+        {
+            content : ')'
+        }
+    }
+}

@@ -1,0 +1,17 @@
+mixin rating(percent = 0, count = 65)
+    .rating
+        .rating__inner
+            - const fullStars = Math.floor(percent / 20)
+            - const partialPercent = (percent % 20) / 20 * 100
+            - const grayStars = 5 - fullStars - (partialPercent > 0 ? 1 : 0)
+
+            - for (let i = 0; i < fullStars; ++i)
+                .rating__star(style='--width: 100%;')
+
+            - if (partialPercent > 0)
+                .rating__star(style=`--width: ${partialPercent}%;`)
+
+            - for (let i = 0; i < grayStars; ++i)
+                .rating__star(style='--width: 0;')
+
+        .rating__count!= count
