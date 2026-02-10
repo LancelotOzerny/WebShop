@@ -28,8 +28,14 @@
 
     &__title
     {
+        display: inline-block;
         margin-top : 16px;
         font-weight : 500;
+
+        &:hover
+        {
+            color: #356EBA;
+        }
     }
 
     &__price
@@ -51,17 +57,17 @@
     }
 }
 
-.catalog-item__price + .catalog-item__old-price
+.catalog-item__old-price
 {
     margin-left: 16px;
 }
 
-.catalog-item__price + .rating
+.catalog-item:not(.catalog-item--discount) .rating
 {
     margin-left: 8px;
 }
 
-.catalog-item__old-price + .rating
+.catalog-item.catalog-item--discount .rating
 {
     display: flex;
     width : 100%;

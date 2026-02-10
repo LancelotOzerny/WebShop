@@ -1,12 +1,15 @@
-mixin catalog-item(image_src, price, old_price = null, title = '', progress=100, reviews_count=100)
-    article.catalog-item
-        header
-            img(src=image_src)
-            button.favourite.active
-            button.show
-            a.btn.catalog-item__add-to-card Add To Cart
+mixin catalog-item(image_src, modifiers = '', price, old_price = null, title = '', progress=100, reviews_count=100)
+    - modifiers += ' catalog-item'
 
-        .catalog-item__title!= title
+    article(class=modifiers)
+        a(href='#')
+            header
+                img(src=image_src)
+                button.favourite.active
+                button.show
+                a.btn.catalog-item__add-to-card Add To Cart
+
+        a(href='#').catalog-item__title!= title
 
         footer
             .catalog-item__price!= price
