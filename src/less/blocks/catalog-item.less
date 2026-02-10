@@ -1,0 +1,120 @@
+.catalog-item
+{
+    &__add-to-card
+    {
+        background-color : #000;
+        color: @base-light-color;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -100%;
+
+        text-align: center;
+        transition: .2s;
+    }
+    &:hover &__add-to-card
+    {
+        bottom: 0;
+    }
+
+    & > footer
+    {
+        margin-top : 8px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__title
+    {
+        margin-top : 16px;
+        font-weight : 500;
+    }
+
+    &__price
+    {
+        display: inline-flex;
+        font-weight: 500;
+        color: @color-red-selected;
+    }
+
+    &__old-price
+    {
+        color: #808080;
+        text-decoration: line-through;
+    }
+
+    .rating
+    {
+        margin-top: 0;
+    }
+}
+
+.catalog-item__price + .catalog-item__old-price
+{
+    margin-left: 16px;
+}
+
+.catalog-item__price + .rating
+{
+    margin-left: 8px;
+}
+
+.catalog-item__old-price + .rating
+{
+    display: flex;
+    width : 100%;
+    margin-top: 8px;
+}
+
+/* HEADER  */
+.catalog-item header
+{
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+
+    overflow         : hidden;
+
+    width            : 270px;
+    height           : 250px;
+    position: relative;
+
+    background-color : @base-light-color;
+
+    button.show, button.favourite
+    {
+        width: 34px;
+        height: 34px;
+
+        position: absolute;
+        right: 12px;
+        background-color : #fff;
+
+        border-radius: 50px;
+
+        background-repeat : no-repeat;
+        background-position : center center;
+
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover, &.active
+        {
+            filter: invert(100%);
+        }
+    }
+
+    button.show
+    {
+        top: 54px;
+        background-image : url('/assets/images/icons/eye.svg');
+    }
+
+    button.favourite
+    {
+        background-image : url('/assets/images/icons/heart.svg');
+        top: 12px;
+    }
+}
