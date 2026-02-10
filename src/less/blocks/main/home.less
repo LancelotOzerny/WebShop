@@ -1,9 +1,18 @@
-section
+section + section .container
 {
-    & + & .container
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    
+    &::before
     {
-        padding: 70px 0 0 0;
-        border-top: 1px solid #B3B3B3;
+        content: '';
+
+        position: absolute;
+        top: -70px;
+        width: 100%;
+        height: 1px;
+        background-color : #B3B3B3;
     }
 }
 
