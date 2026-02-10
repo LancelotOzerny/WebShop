@@ -56,63 +56,30 @@ block content
                 .btn.btn--danger View All
 
             .catalog-list
-                article.catalog-item
-                    header
-                        img(src='/assets/images/catalog/ExploreProducts/product-1.png')
-                        button.favourite.active
-                        button.show
-                        a.btn.catalog-item__add-to-card Add To Cart
-
-                    .catalog-item__title Breed Dry Dog Food
-
-                    footer
-                        .catalog-item__price $100
-                        +rating(60, 35)
-
-                article.catalog-item
-                    header
-                        img(src='/assets/images/catalog/ExploreProducts/product-2.png')
-                        button.favourite
-                        button.show
-                        a.btn.catalog-item__add-to-card Add To Cart
-
-                        a.btn.catalog-item__add-to-card Add To Cart
-
-                    .catalog-item__title Breed Dry Dog Food
-
-                    footer
-                        .catalog-item__price $360
-                        +rating(80, 95)
-
-                article.catalog-item
-                    header
-                        img(src='/assets/images/catalog/ExploreProducts/product-3.png')
-                        button.favourite
-                        button.show
-                        a.btn.catalog-item__add-to-card Add To Cart
-
-                        a.btn.catalog-item__add-to-card Add To Cart
-
-                    .catalog-item__title Breed Dry Dog Food
-
-                    footer
-                        .catalog-item__price $700
-                        +rating(100, 325)
-
-                article.catalog-item
-                    header
-                        img(src='/assets/images/catalog/ExploreProducts/product-4.png')
-                        button.favourite
-                        button.show
-                        a.btn.catalog-item__add-to-card Add To Cart
-
-                    .catalog-item__title Breed Dry Dog Food
-
-                    footer
-                        .catalog-item__price $500
-                        .catalog-item__old-price $500
-                        +rating(80, 145)
-
+                +catalog-item(
+                    '/assets/images/catalog/ExploreProducts/product-1.png',
+                    '$100', null,
+                    'Breed Dry Dog Food',
+                    60, 35
+                )
+                +catalog-item(
+                    '/assets/images/catalog/ExploreProducts/product-2.png',
+                    '$360', null,
+                    'CANON EOS DSLR Camera',
+                    80, 95
+                )
+                +catalog-item(
+                    '/assets/images/catalog/ExploreProducts/product-3.png',
+                    '$700', null,
+                    'ASUS FHD Gaming Laptop',
+                    100, 325
+                )
+                +catalog-item(
+                    '/assets/images/catalog/ExploreProducts/product-4.png',
+                    '$500', null,
+                    'Curology Product Set ',
+                    80, 145
+                )
 
     .discount-block
         .container.discount.theme-dark

@@ -1,0 +1,15 @@
+mixin catalog-item(image_src, price, old_price = null, title = '', progress=100, reviews_count=100)
+    article.catalog-item
+        header
+            img(src=image_src)
+            button.favourite.active
+            button.show
+            a.btn.catalog-item__add-to-card Add To Cart
+
+        .catalog-item__title!= title
+
+        footer
+            .catalog-item__price!= price
+            - if (old_price)
+                .catalog-item__old-price $500
+            +rating(progress, reviews_count)
