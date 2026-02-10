@@ -25,5 +25,44 @@
 
 .arrival
 {
-    background-color : #000;
+    position: relative;
+    color: @base-light-color;
+    display: grid;
+    align-items: end;
+
+    &__image
+    {
+        position: absolute;
+        z-index: -1;
+    }
+
+    &__info
+    {
+        padding: 32px;
+        transition: .2s;
+    }
+
+    &:hover &__info
+    {
+        padding-bottom: 64px;
+    }
+
+    &__title
+    {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__description
+    {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+
+    &__link
+    {
+        display: inline-block;
+        border-bottom: 1px solid #8D8D8D;
+        margin-top: 16px;
+    }
 }
