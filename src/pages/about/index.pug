@@ -1,13 +1,28 @@
 extends ./../../layouts/main
 
 block content
+    section.about__wrapper
+        .container.about
+            .about__content
+                .main-title
+                    .main-title__large Out Story
+
+                .about__text
+                    p
+                        | Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active
+                        | presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions,
+                        | Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.
+
+                    p
+                        | Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers
+                        | a diverse assotment in categories ranging  from consumer.
+
+            img(src='/assets/images/about/side-image.jpg').about__image
+
+
+
     section
         .container
-            header
-                div.main-title
-                    .main-title__small Categories
-                    .main-title__large Browse By Category
-
             .categories-list
                 a(href='#').category.large
                     .category__icon.dark-circle
