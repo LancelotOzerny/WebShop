@@ -1,19 +1,30 @@
-mixin catalog-item(image_src, modifiers = '', price, old_price = null, title = '', progress=null, reviews_count=null)
-    - modifiers += ' catalog-item'
+mixin catalog-item-remake(icon__src, title, price, params = {})
+    - modifiers = 'catalog-item '
+    - if ('modifiers' in params)
+        - modifiers += params.modifiers
+    - modifiers += ('old_price' in params) ? ' catalog-item--discount' : ''
 
     article(class=modifiers)
         a(href='#')
             header
-                img(src=image_src)
-                button.favourite.active
-                button.show
+                img(src=icon__src)
+
+                - if ('icons' in params)
+                    .catalog-item__control-icons
+                        each value, key in params.icons
+                            - icon_modifiers = key + (value ? ' active' : '')
+                            button(class=icon_modifiers)
+
                 a.btn.catalog-item__add-to-card Add To Cart
 
         a(href='#').catalog-item__title!= title
 
         footer
             .catalog-item__price!= price
-            - if (old_price)
-                .catalog-item__old-price!= old_price
-            - if (progress !== null)
-                +rating(progress, reviews_count)
+            - if ('old_price' in params)
+                .catalog-item__old-price!= params.old_price
+
+            - if ('progress' in params)
+                - progress_value = params.progress.value ?? 100
+                - reviews_count = params.progress.reviews_count ?? 65
+                +rating(progress_value, reviews_count)

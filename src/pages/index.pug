@@ -56,33 +56,61 @@ block content
                 .btn.btn--danger View All
 
             .catalog-list
-                +catalog-item(
-                    '/assets/images/catalog/BestSelling/product-1.png',
-                    'catalog-item--discount',
-                    '$260', '$360',
-                    'The north coat',
-                    100, 65
+                +catalog-item-remake(
+                    "/assets/images/catalog/BestSelling/product-1.png",
+                    "The north coat",
+                    '260',
+                    {
+                        progress: {},
+                        old_price: 360,
+                        icons: {
+                            favourite: true,
+                            show: false,
+                        }
+                    }
                 )
-                +catalog-item(
-                    '/assets/images/catalog/BestSelling/product-2.png',
-                    'catalog-item--discount',
-                    '$960', '$1160',
-                    'Gucci duffle bag',
-                    90, 65
+                +catalog-item-remake(
+                    "/assets/images/catalog/BestSelling/product-2.png",
+                    "Gucci duffle bag",
+                    '960',
+                    {
+                        progress: {
+                            value: 90
+                        },
+                        old_price: 1160,
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
-                +catalog-item(
-                    '/assets/images/catalog/BestSelling/product-3.png',
-                    'catalog-item--discount',
-                    '$160', '$170',
-                    'RGB liquid CPU Cooler',
-                    90, 65
+                +catalog-item-remake(
+                    "/assets/images/catalog/BestSelling/product-3.png",
+                    "RGB liquid CPU Cooler",
+                    '160',
+                    {
+                        progress: {
+                            value: 90
+                        },
+                        old_price: 170,
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
-                +catalog-item(
-                    '/assets/images/catalog/BestSelling/product-4.png',
-                    'catalog-item--discount',
-                    '$360', null,
-                    'Small BookSelf',
-                    100, 65
+                +catalog-item-remake(
+                    "/assets/images/catalog/BestSelling/product-4.png",
+                    "Small BookSelf",
+                    '360',
+                    {
+                        modifiers: 'catalog-item--discount',
+                        progress: {},
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
 
 
@@ -107,62 +135,122 @@ block content
                     .main-title__large Explore Our Products
 
             .catalog-list
-                +catalog-item(
-                    '/assets/images/catalog/ExploreProducts/product-1.png',
-                    '',
-                    '$100', null,
-                    'Breed Dry Dog Food',
-                    60, 35
+                +catalog-item-remake(
+                    "/assets/images/catalog/ExploreProducts/product-1.png",
+                    "Breed Dry Dog Food",
+                    '100',
+                    {
+                        progress: {
+                            value: 60,
+                            reviews_count: 35
+                        },
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
-                +catalog-item(
-                    '/assets/images/catalog/ExploreProducts/product-2.png',
-                    '',
-                    '$360', null,
-                    'CANON EOS DSLR Camera',
-                    80, 95
+                +catalog-item-remake(
+                    "/assets/images/catalog/ExploreProducts/product-2.png",
+                    "CANON EOS DSLR Camera",
+                    '360',
+                    {
+                        progress: {
+                            value: 80,
+                            reviews_count: 95
+                        },
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
-                +catalog-item(
-                    '/assets/images/catalog/ExploreProducts/product-3.png',
-                    '',
-                    '$700', null,
-                    'ASUS FHD Gaming Laptop',
-                    100, 325
+                +catalog-item-remake(
+                    "/assets/images/catalog/ExploreProducts/product-3.png",
+                    "ASUS FHD Gaming Laptop",
+                    '700',
+                    {
+                        progress: {
+                            reviews_count: 320
+                        },
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
-                +catalog-item(
-                    '/assets/images/catalog/ExploreProducts/product-4.png',
-                    '',
-                    '$500', null,
-                    'Curology Product Set ',
-                    80, 145
+                +catalog-item-remake(
+                    "/assets/images/catalog/ExploreProducts/product-4.png",
+                    "Curology Product Set ",
+                    '500',
+                    {
+                        progress: {
+                            value: 80,
+                            reviews_count: 145
+                        },
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
+                )
+                +catalog-item-remake(
+                    "/assets/images/catalog/ExploreProducts/product-6.png",
+                    "Kids Electric Car",
+                    '960',
+                    {
+                        progress: {},
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
 
-                +catalog-item(
-                    '/assets/images/catalog/ExploreProducts/product-5.png',
-                    '',
-                    '$100', null,
-                    'Breed Dry Dog Food',
-                    60, 35
+                +catalog-item-remake(
+                    "/assets/images/catalog/ExploreProducts/product-5.png",
+                    "Jr. Zoom Soccer Cleats",
+                    '1160',
+                    {
+                        progress: {
+                            reviews_count: 35
+                        },
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
-                +catalog-item(
-                    '/assets/images/catalog/ExploreProducts/product-6.png',
-                    '',
-                    '$360', null,
-                    'CANON EOS DSLR Camera',
-                    80, 95
+
+                +catalog-item-remake(
+                    "/assets/images/catalog/ExploreProducts/product-7.png",
+                    "GP11 Shooter USB Gamepad",
+                    '660',
+                    {
+                        progress: {
+                            value: 90,
+                            reviews_count: 55
+                        },
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
-                +catalog-item(
-                    '/assets/images/catalog/ExploreProducts/product-7.png',
-                    '',
-                    '$700', null,
-                    'ASUS FHD Gaming Laptop',
-                    100, 325
-                )
-                +catalog-item(
-                    '/assets/images/catalog/ExploreProducts/product-8.png',
-                    '',
-                    '$500', null,
-                    'Curology Product Set ',
-                    80, 145
+                +catalog-item-remake(
+                    "/assets/images/catalog/ExploreProducts/product-8.png",
+                    "Quilted Satin Jacket",
+                    '660',
+                    {
+                        progress: {
+                            value: 90,
+                            reviews_count: 55
+                        },
+                        icons: {
+                            favourite: false,
+                            show: false,
+                        }
+                    }
                 )
 
     section
