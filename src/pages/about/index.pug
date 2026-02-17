@@ -1,0 +1,53 @@
+extends ./../../layouts/main
+
+block content
+    section
+        .container
+            header
+                div.main-title
+                    .main-title__small Categories
+                    .main-title__large Browse By Category
+
+            .categories-list
+                a(href='#').category.large
+                    .category__icon.dark-circle
+                        img(src='/assets/images/icons/categories/Icon-Shopping.svg')
+                    p.category__title 10.5K
+                    p.category__description Sallers active our site
+
+                a(href='#').category.large
+                    .category__icon.dark-circle
+                        img(src='/assets/images/icons/categories/Icon-Sale.svg')
+                    p.category__title 33K
+                    p.category__description Mopnthly Produduct Sale
+
+                a(href='#').category.large
+                    .category__icon.dark-circle
+                        img(src='/assets/images/icons/categories/Icon-Moneybag.svg')
+                    p.category__title 45.5K
+                    p.category__description Customer active in our site
+
+                a(href='#').category.large
+                    .category__icon.dark-circle
+                        img(src='/assets/images/icons/categories/Icon_shop.svg')
+                    p.category__title 25K
+                    p.category__description Anual gross sale in our site
+
+
+    .services
+        .container
+            .services-list
+                .service
+                    img(src='/assets/images/home/services/Services-0.png').service__icon
+                    p.service__title FREE AND FAST DELIVERY
+                    p.service__text Free delivery for all orders over $140
+
+                .service
+                    img(src='/assets/images/home/services/Services-1.png').service__icon
+                    p.service__title 24/7 CUSTOMER SERVICE
+                    p.service__text Friendly 24/7 customer support
+
+                .service
+                    img(src='/assets/images/home/services/Services-2.png').service__icon
+                    p.service__title MONEY BACK GUARANTEE
+                    p.service__text We return money within 30 days
