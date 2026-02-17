@@ -120,35 +120,40 @@
     &.danger { background-color : #DB4444; }
 }
 
-.catalog-item header
+.catalog-item__control-icons button
 {
-    button.show, button.favourite
+    width               : 34px;
+    height              : 34px;
+
+    background-color    : #FFFFFF;
+    border-radius       : 50px;
+
+    background-repeat   : no-repeat;
+    background-position : center center;
+
+    cursor              : pointer;
+    transition          : .2s;
+
+    &:hover, &.active
     {
-        width: 34px;
-        height: 34px;
-
-        background-color : #fff;
-        border-radius: 50px;
-
-        background-repeat : no-repeat;
-        background-position : center center;
-
-        cursor: pointer;
-        transition: .2s;
-
-        &:hover, &.active
-        {
-            filter: invert(100%);
-        }
+        filter : invert(100%);
     }
+}
 
-    button.show
+.catalog-item__control-icons button
+{
+    &.show
     {
         background-image : url('/assets/images/icons/eye.svg');
     }
 
-    button.favourite
+    &.favourite
     {
         background-image : url('/assets/images/icons/heart.svg');
+    }
+
+    &.delete
+    {
+        background-image : url('/assets/images/icons/icon-delete.svg');
     }
 }
