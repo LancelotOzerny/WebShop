@@ -1,0 +1,130 @@
+.slider.horizontal
+{
+    display: flex;
+    flex-direction: column;
+
+    & > footer
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 40px;
+        gap: 12px;
+    }
+}
+
+.slider.horizontal > .slider__inner
+{
+    display: flex;
+    justify-content: space-between;
+
+    gap: 30px;
+    cursor: pointer;
+}
+
+.slide-link
+{
+    width: 12px;
+    height: 12px;
+    background-color : #B3B3B3;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+
+    transition: .2s;
+    
+    &::before,
+    &::after
+    {
+        content: '';
+
+        border-radius: 20px;
+        position : absolute;
+        transition: .2s;
+
+        left: 50%;
+        top: 50%;
+
+        width: 0;
+        height: 0;
+    }
+
+    &::before
+    {
+        background-color : #FFFFFF;
+    }
+
+    &::after
+    {
+        background-color : #DB4444;
+    }
+
+    &.active::before,
+    &:hover::before
+    {
+        width: 12px;
+        height: 12px;
+
+        left: calc(50% - 6px);
+        top: calc(50% - 6px);
+    }
+
+    &.active::after,
+    &:hover::after
+    {
+        width: 10px;
+        height: 10px;
+
+        left: calc(50% - 5px);
+        top: calc(50% - 5px);
+    }
+    
+    &.active, &:hover
+    {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.slide
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    
+    header
+    {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        background-color : #F5F5F5;
+        height: 430px;
+    }
+
+    &__content
+    {
+        margin-top: 32px;
+    }
+
+    &__title
+    {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    &__description
+    {
+        margin-top: 8px;
+    }
+
+    footer
+    {
+        display: flex;
+        justify-content: start;
+        margin-top: 16px;
+        gap: 16px;
+    }
+}
