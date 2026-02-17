@@ -90,15 +90,35 @@
     background-color : #FAFAFA;
 }
 
-.catalog-item__control-icons
+.catalog-item__control-icons,
+.catalog-item__info-messages
 {
     display: grid;
     position: absolute;
     top: 12px;
-    right: 12px;
     gap: 8px;
 }
 
+.catalog-item__control-icons
+{
+    right: 12px;
+}
+
+.catalog-item__info-messages
+{
+    left: 12px;
+}
+
+.catalog-item__message
+{
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    color: #FAFAFA;
+
+    &.success { background-color : #00FF66; }
+    &.danger { background-color : #DB4444; }
+}
 
 .catalog-item header
 {

@@ -9,6 +9,11 @@ mixin catalog-item(icon__src, title, price, params = {})
             header
                 img(src=icon__src)
 
+                - if ('info' in params)
+                    .catalog-item__info-messages
+                        - for (const item of params.info)
+                            .catalog-item__message(class=item.theme)= item.text
+
                 - if ('icons' in params)
                     .catalog-item__control-icons
                         each value, key in params.icons
