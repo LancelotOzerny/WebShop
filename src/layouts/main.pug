@@ -4,9 +4,14 @@ include ./../components/timer/timer
 include ./../components/rating/rating
 include ./../components/catalog-item/catalog-item
 
+
 doctype
 html
     head
+        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
         title #{title}
 
         link(rel="stylesheet" href="/assets/css/components.css")
@@ -35,7 +40,7 @@ html
 
                     nav.navbar.navbar-horizontal
                         a(href='/').navbar__item.active Home
-                        a(href='/contacts/').navbar__item Contact
+                        a(href='/contacts/').navbar__item Contacts
                         a(href='/about/').navbar__item About
                         a(href='/login/').navbar__item Sign Up
 
