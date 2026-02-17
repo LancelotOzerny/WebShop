@@ -1,0 +1,74 @@
+extends ./../../layouts/main
+
+block content
+    section
+        .container
+            header
+                .main-title__medium Wishlist (4)
+                .btn.btn--light Move All To Bag
+
+            .catalog-list
+                +catalog-item(
+                    '/assets/images/catalog/BestSelling/product-1.png',
+                    'catalog-item--discount',
+                    '$260', '$1160',
+                    'The north coat',
+                    null
+                )
+                +catalog-item(
+                    '/assets/images/catalog/BestSelling/product-2.png',
+                    'catalog-item--discount',
+                    '$960', null,
+                    'Gucci duffle bag',
+                    null
+                )
+                +catalog-item(
+                    '/assets/images/catalog/BestSelling/product-3.png',
+                    'catalog-item--discount',
+                    '$160', null,
+                    'RGB liquid CPU Cooler',
+                    null
+                )
+                +catalog-item(
+                    '/assets/images/catalog/BestSelling/product-4.png',
+                    'catalog-item--discount',
+                    '$360', null,
+                    'Small BookSelf',
+                    null
+                )
+
+    section
+        .container
+            header
+                .main-title__small Just for you
+                .btn.btn--light See All
+
+            .catalog-list
+                +catalog-item(
+                    '/assets/images/catalog/BestSelling/product-1.png',
+                    'catalog-item--discount',
+                    '$260', '$1160',
+                    'The north coat',
+                    100, 65
+                )
+                +catalog-item(
+                    '/assets/images/catalog/BestSelling/product-2.png',
+                    'catalog-item--discount',
+                    '$960', null,
+                    'Gucci duffle bag',
+                    100, 65
+                )
+                +catalog-item(
+                    '/assets/images/catalog/BestSelling/product-3.png',
+                    'catalog-item--discount',
+                    '$160', null,
+                    'RGB liquid CPU Cooler',
+                    100, 65
+                )
+                +catalog-item(
+                    '/assets/images/catalog/BestSelling/product-4.png',
+                    'catalog-item--discount',
+                    '$360', null,
+                    'Small BookSelf',
+                    100, 65
+                )

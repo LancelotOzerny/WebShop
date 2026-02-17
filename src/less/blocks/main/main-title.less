@@ -25,10 +25,26 @@
         }
     }
 
+    &__small,
+    &__medium,
     &__large
     {
-        margin-top : 20px;
+        text-transform: capitalize;
+    }
+
+    &__large
+    {
         font-size  : 36px;
+    }
+
+    &__small + &__large
+    {
+        margin-top : 20px;
+    }
+
+    &__medium
+    {
+        font-size  : 20px;
     }
 
     .timer

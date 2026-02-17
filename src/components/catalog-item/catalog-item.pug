@@ -1,4 +1,4 @@
-mixin catalog-item(image_src, modifiers = '', price, old_price = null, title = '', progress=100, reviews_count=100)
+mixin catalog-item(image_src, modifiers = '', price, old_price = null, title = '', progress=null, reviews_count=null)
     - modifiers += ' catalog-item'
 
     article(class=modifiers)
@@ -14,5 +14,6 @@ mixin catalog-item(image_src, modifiers = '', price, old_price = null, title = '
         footer
             .catalog-item__price!= price
             - if (old_price)
-                .catalog-item__old-price $500
-            +rating(progress, reviews_count)
+                .catalog-item__old-price!= old_price
+            - if (progress !== null)
+                +rating(progress, reviews_count)
