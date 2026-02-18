@@ -1,0 +1,28 @@
+.slider-arrow
+{
+    display: inline-block;
+
+    width: 46px;
+    height: 46px;
+    border-radius: 50px;
+
+    background-color : #FAFAFA;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+    transition: .2s;
+
+    & + &
+    {
+        margin-left: 8px;
+    }
+    
+    &:hover
+    {
+        background-color : #EFEFEF;
+    }
+}
+
+.slider-arrow.left { background-image: url('/assets/images/icons/arrow-left.svg'); }
+.slider-arrow.right { background-image: url('/assets/images/icons/arrow-right.svg'); }
