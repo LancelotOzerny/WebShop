@@ -1,5 +1,8 @@
 extends ./../../layouts/main
 
+block params
+    - params.breadcrumbs = ['Home', 'Contacts']
+
 block content
     section
         .container.contacts

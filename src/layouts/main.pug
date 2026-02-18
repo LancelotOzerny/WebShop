@@ -4,6 +4,9 @@ include ./../components/timer/timer
 include ./../components/rating/rating
 include ./../components/catalog-item/catalog-item
 
+- params = {}
+
+block params
 
 doctype
 html
@@ -42,7 +45,7 @@ html
                         a(href='/').navbar__item.active Home
                         a(href='/contacts/').navbar__item Contacts
                         a(href='/about/').navbar__item About
-                        a(href='/login/').navbar__item Sign Up
+                        a(href='/register/').navbar__item Sign Up
 
                     .top-navigation__user-actions
                         form.top-navigation__search-form.form-block.form--light
@@ -57,11 +60,17 @@ html
                                 img(src='/assets/images/icons/bucket.svg')
                             a(href='/profile/').top-navigation__control-item
                                 img(src='/assets/images/icons/profile.svg')
-        div.breadcrumbs
-            .container
-                | Home
-                span.breadcrumbs__separator /
-                span.active Current Page
+
+        - if ('breadcrumbs' in params)
+            div.breadcrumbs
+                .container
+                    - for (let i = 0; i < params.breadcrumbs.length; ++i)
+                        - if (i === params.breadcrumbs.length - 1)
+                            span.active!= params.breadcrumbs[i]
+                            - continue
+
+                        span!= params.breadcrumbs[i]
+                        span.breadcrumbs__separator /
 
         block content
 
