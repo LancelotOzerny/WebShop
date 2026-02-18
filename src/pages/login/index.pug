@@ -1,0 +1,19 @@
+extends ./../../layouts/main
+
+block content
+    section.authentic__wrapper
+        .container.authentic
+            img(src='/assets/images/auth/side-image.png').authentic__side-image
+
+            .auth-form.register-form
+                header
+                    .auth-form__title Log in to Exclusive
+                    .auth-form__subtitle Enter your details below
+
+                .auth-form__inner
+                    input(type='text', placeholder='Email or Phone Number')
+                    input(type='password', placeholder='Password')
+
+                footer.flex
+                    a(href='/login/').btn.btn--danger Log In
+                    a(href='#').forget-link Forget password?
