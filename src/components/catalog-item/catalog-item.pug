@@ -33,3 +33,15 @@ mixin catalog-item(icon__src, title, price, params = {})
                 - progress_value = params.progress.value ?? 100
                 - reviews_count = params.progress.reviews_count ?? 65
                 +rating(progress_value, reviews_count)
+
+            - if ('colours' in params)
+                div.catalog-item__colours
+                    - for (let i = 0; i < params.colours.length; ++i)
+                        - background = 'background-color: ' + params.colours[i] + ';'
+
+                        - if (i === 0)
+                            .colour__wrapper.active
+                                .colour(style=background)
+                        - else
+                            .colour__wrapper
+                                .colour(style=background)

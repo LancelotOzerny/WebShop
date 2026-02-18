@@ -1,0 +1,44 @@
+.colour
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    position: absolute;
+    transition: .2s;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+
+    &__wrapper
+    {
+        transition: .1s;
+        display: inline-block;
+
+        width: 20px;
+        height: 20px;
+
+        position: relative;
+        border-radius: 50px;
+
+        cursor: pointer;
+
+        & + &
+        {
+            margin-left: 8px;
+        }
+    }
+}
+
+
+.colour__wrapper.active,
+.colour__wrapper:hover
+{
+    border: 2.5px solid #000;
+}
+.colour__wrapper.active .colour,
+.colour__wrapper:hover .colour
+{
+    width : 10px;
+    height : 10px;
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+}
